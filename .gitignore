@@ -1,3 +1,6 @@
 .venv
 .idea
 .gigaide
+__pycache__
+users.db
+.DS_Store
