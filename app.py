@@ -44,4 +44,4 @@ def create_user():
         return jsonify({"error": "Пользователь с таким email уже существует"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)

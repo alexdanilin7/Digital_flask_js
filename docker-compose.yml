@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: flask_users_app
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - FLASK_ENV=production
+      - DB_PATH=/app/data/users.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/users"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

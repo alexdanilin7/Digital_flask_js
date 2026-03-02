@@ -2,8 +2,9 @@ import sqlite3
 from typing import Optional, List
 from dataclasses import dataclass
 from contextlib import contextmanager
+import os
 
-DB_NAME = "users.db"
+DB_NAME = os.getenv("DB_NAME", "data/users.db")
 
 @dataclass
 class User:
