@@ -2,6 +2,6 @@
 .idea
 .gigaide
 __pycache__
-data
+data/users.db
 .DS_Store
 SimpleWorkUsers.iml
